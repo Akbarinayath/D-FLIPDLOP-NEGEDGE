@@ -1,16 +1,17 @@
 # D-FLIPDLOP-NEGEDGE
-
-*AIM:*
+### Name : Akbar I
+### Register Number : 212224230014
+**AIM:**
 
 To implement  D flipflop using verilog and validating their functionality using their functional tables
 
-*SOFTWARE REQUIRED:*
+**SOFTWARE REQUIRED:**
 
 Quartus prime
 
-*THEORY*
+**THEORY**
 
-*D Flip-Flop*
+**D Flip-Flop**
 
 D flip-flop operates with only positive clock transitions or negative clock transitions. Whereas, D latch operates with enable signal. That means, the output of D flip-flop is insensitive to the changes in the input, D except for active transition of the clock signal. The circuit diagram of D flip-flop is shown in the following figure.
 
@@ -26,7 +27,8 @@ Therefore, D flip-flop always Hold the information, which is available on data i
 
 Next state of D flip-flop is always equal to data input, D for every positive transition of the clock signal. Hence, D flip-flops can be used in registers, shift registers and some of the counters.
 
-*Procedure*
+**Procedure**
+
 1.Type the program in Quartus software.
 
 2.Compile and run the program.
@@ -36,31 +38,30 @@ Next state of D flip-flop is always equal to data input, D for every positive tr
 4.Create nodes for inputs and outputs to generate the timing diagram.
 
 5.For different input combinations generate the timing diagram
+**PROGRAM**
+```
+/* Program for flipflops and verify its truth table in quartus using Verilog programming.
+Developed by:Arsha Jith S J
+RegisterNumber:212224220010
+```
+```
+module ex8(D,Y);
+input D;
+output Y;
+assign Y = D;
+endmodule 
+```
+
+**RTL LOGIC FOR FLIPFLOPS**
+
+<img width="1150" height="382" alt="image" src="https://github.com/user-attachments/assets/44534078-2de6-47aa-91a4-e3ae61332953" />
 
 
-*PROGRAM*
+**TIMING DIGRAMS FOR FLIP FLOPS**
 
-module exp8(D,clk,Q,Qbar);
-input D,clk;
-output reg Q;
-output reg Qbar;
-initial Q=0;
-initial Qbar=1;
-always @(posedge clk)
-begin
-Q=D;
-Qbar=~D;
-end
-endmodule
+<img width="1257" height="732" alt="image" src="https://github.com/user-attachments/assets/fa89acc3-e186-42d8-86af-c103dae90aaa" />
 
 
-*RTL LOGIC FOR FLIPFLOPS*
-![Screenshot 2025-04-22 113255](https://github.com/user-attachments/assets/6e19723b-0be9-4df2-a6e1-19552add9271)
+**RESULTS**
 
-
-*TIMING DIGRAMS FOR FLIP FLOPS*
-![Screenshot 2025-04-22 113513](https://github.com/user-attachments/assets/f01132b6-6005-4bab-945e-79d504d2fb75)
-
-
-*RESULTS*
-Thus the D flipflop using verilog and validating their functionality using their functional tables is verified.
+Thus the D Flipflop circuits are designed and the truth tables is verified using Quartus software.
